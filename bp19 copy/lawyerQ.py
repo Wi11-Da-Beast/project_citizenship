@@ -22,12 +22,12 @@ def Help():
     server = smtplib.SMTP('smtp.live.com', 587)
     server.ehlo()
     server.starttls()
-    server.login("y444444y@hotmail.com", "")
+    server.login("INSERT SENDER EMAIL HERE", "INSERT PASSWORD HERE")
     subject = ""
     text = f"User at {str(reqs[0][1])} says {str(reqs[0][0])}"
     msg = "Subject: {}\n\n{}".format(subject, text)
     print(msg)
-    server.sendmail("y444444y@hotmail.com", "8608782363@vtext.com", msg)
+    server.sendmail("INSERT SENDER EMAIL", "INSERT RECIPIENT EMAIL", msg)
     server.close()
     return(f"Your message '{str(reqs[0][0])}' is successfully delivered!")
     
